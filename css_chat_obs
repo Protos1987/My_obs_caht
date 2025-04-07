@@ -1,0 +1,115 @@
+body { 
+  background-color: rgba(0, 0, 0, 0); 
+  margin: 0px auto; 
+  overflow: hidden; 
+}
+
+/* BEGIN YOUTUBE */
+
+#panel-pages,
+yt-live-chat-header-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-img-shadow,
+#ticker {
+  display: none !important;
+}
+
+yt-live-chat-text-message-renderer {
+  font-size: 18px;
+  padding: 4px 8px;
+}
+
+#visible-banners yt-live-chat-banner-renderer #header {
+  display: none !important;
+}
+
+#visible-banners yt-live-chat-banner-renderer #contents {
+  height: auto !important;
+  transform: translateY(0px) !important;
+}
+
+#visible-banners yt-live-chat-banner-renderer yt-live-chat-text-message-renderer #content.yt-live-chat-text-message-renderer {
+  font-size: 0.9em !important;
+}
+
+yt-live-chat-text-message-renderer[in-collapsed-banner] #content.yt-live-chat-text-message-renderer {
+  white-space: inherit !important;
+  overflow: inherit !important;
+}
+
+yt-live-chat-text-message-renderer[in-banner] {
+  padding: 4px !important;
+}
+
+#live-chat-item-list-panel > #contents > #item-scroller {
+  scrollbar-width: none !important;
+}
+
+yt-live-chat-renderer[has-action-panel-renderer] #action-panel.yt-live-chat-renderer {
+  bottom: unset;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+
+yt-live-chat-poll-header-renderer,
+#content.yt-live-chat-poll-choice {
+  /*font-size: 0.9em;*/
+  padding: 2px;
+}
+
+#reaction-control-panel {
+  display: none;
+}
+
+/* Прозрачный фон для YouTube */
+yt-live-chat-renderer,
+yt-live-chat-text-message-renderer,
+yt-live-chat-item-list-renderer,
+#chatframe {
+  background: transparent !important;
+}
+
+/* Тень для текста сообщений YouTube */
+yt-live-chat-text-message-renderer {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* END YOUTUBE */
+
+/* BEGIN TWITCH */
+
+#root .stream-chat-header,
+#root .chat-room__content > div:first-child,
+#root .chat-input,
+#root .chat-line__status[data-a-target="chat-welcome-message"] {
+  display: none !important;
+}
+
+#root .scrollable-area[data-a-target="chat-scroller"] .simplebar-track {
+  display: none !important;
+}
+
+#root .chat-line__message {
+  font-size: 18px;
+  padding: 6px 8px;
+}
+
+/* Прозрачный фон для Twitch */
+#root .chat-scrollable-area__message-container,
+#root .chat-line__message,
+#root .chat-room {
+  background: transparent !important;
+}
+
+/* Тень для текста сообщений Twitch */
+#root .chat-line__message {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* END TWITCH */
+
+/* Общая прозрачность для всех элементов */
+* {
+  background: transparent !important;
+}
