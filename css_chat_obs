@@ -17,6 +17,9 @@ yt-img-shadow,
 yt-live-chat-text-message-renderer {
   font-size: 18px;
   padding: 4px 8px;
+  font-family: Arial, sans-serif; /* Шрифт */
+  color: #FFFFFF; /* Цвет текста */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Тень текста */
 }
 
 #visible-banners yt-live-chat-banner-renderer #header {
@@ -70,11 +73,6 @@ yt-live-chat-item-list-renderer,
   background: transparent !important;
 }
 
-/* Тень для текста сообщений YouTube */
-yt-live-chat-text-message-renderer {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-}
-
 /* END YOUTUBE */
 
 /* BEGIN TWITCH */
@@ -91,7 +89,10 @@ yt-live-chat-text-message-renderer {
 }
 
 #root .chat-line__message {
-  font-size: 18px;
+  font-size: 18px; /* Размер шрифта */
+  font-family: Arial, sans-serif; /* Шрифт */
+  color: #FFFFFF; /* Цвет текста */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Тень текста */
   padding: 6px 8px;
 }
 
@@ -100,11 +101,6 @@ yt-live-chat-text-message-renderer {
 #root .chat-line__message,
 #root .chat-room {
   background: transparent !important;
-}
-
-/* Тень для текста сообщений Twitch */
-#root .chat-line__message {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 /* END TWITCH */
