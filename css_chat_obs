@@ -1,111 +1,124 @@
 body { 
-  background-color: rgba(0, 0, 0, 0); 
-  margin: 0px auto; 
-  overflow: hidden; 
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный фон страницы */
+  margin: 0px auto; /* Убираем отступы и центрируем контент */
+  overflow: hidden; /* Отключаем прокрутку */
 }
 
-/* BEGIN YOUTUBE */
+/* НАЧАЛО YOUTUBE */
 
+/* Скрытие ненужных элементов на YouTube */
 #panel-pages,
 yt-live-chat-header-renderer,
 yt-live-chat-viewer-engagement-message-renderer,
 yt-img-shadow,
 #ticker {
-  display: none !important;
+  display: none !important; /* Скрыть эти элементы */
 }
 
+/* Стили для сообщений в чате на YouTube */
 yt-live-chat-text-message-renderer {
-  font-size: 18px;
-  padding: 4px 8px;
+  font-size: 18px; /* Размер шрифта */
+  padding: 4px 8px; /* Отступы внутри сообщений */
   font-family: Arial, sans-serif; /* Шрифт */
   color: #FFFFFF; /* Цвет текста */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Тень текста */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Тень текста для улучшения видимости */
 }
 
+/* Скрытие заголовка баннера на YouTube */
 #visible-banners yt-live-chat-banner-renderer #header {
-  display: none !important;
+  display: none !important; /* Скрыть заголовок */
 }
 
+/* Стилизация содержимого баннера YouTube */
 #visible-banners yt-live-chat-banner-renderer #contents {
-  height: auto !important;
-  transform: translateY(0px) !important;
+  height: auto !important; /* Автоматическая высота */
+  transform: translateY(0px) !important; /* Убираем сдвиг */
 }
 
+/* Уменьшение шрифта сообщений в баннере на YouTube */
 #visible-banners yt-live-chat-banner-renderer yt-live-chat-text-message-renderer #content.yt-live-chat-text-message-renderer {
-  font-size: 0.9em !important;
+  font-size: 0.9em !important; /* Меньший размер шрифта */
 }
 
+/* Поведение сообщений в свернутом баннере на YouTube */
 yt-live-chat-text-message-renderer[in-collapsed-banner] #content.yt-live-chat-text-message-renderer {
-  white-space: inherit !important;
-  overflow: inherit !important;
+  white-space: inherit !important; /* Оставляем переносы строк */
+  overflow: inherit !important; /* Разрешаем переполнение */
 }
 
+/* Дополнительные отступы для сообщений в баннерах на YouTube */
 yt-live-chat-text-message-renderer[in-banner] {
-  padding: 4px !important;
+  padding: 4px !important; /* Отступы */
 }
 
+/* Скрытие полосы прокрутки в чате на YouTube */
 #live-chat-item-list-panel > #contents > #item-scroller {
-  scrollbar-width: none !important;
+  scrollbar-width: none !important; /* Отключение прокрутки */
 }
 
+/* Позиционирование панели действий в чате YouTube */
 yt-live-chat-renderer[has-action-panel-renderer] #action-panel.yt-live-chat-renderer {
-  bottom: unset;
-  top: 0;
-  right: 0;
-  padding: 0;
+  bottom: unset; /* Убираем нижний отступ */
+  top: 0; /* Позиционируем сверху */
+  right: 0; /* Позиционируем справа */
+  padding: 0; /* Убираем отступы */
 }
 
+/* Стилизация опросов в чате YouTube */
 yt-live-chat-poll-header-renderer,
 #content.yt-live-chat-poll-choice {
-  /*font-size: 0.9em;*/
-  padding: 2px;
+  padding: 2px; /* Отступы для опросов */
 }
 
+/* Скрытие панели реакций на YouTube */
 #reaction-control-panel {
-  display: none;
+  display: none; /* Скрыть панель реакций */
 }
 
-/* Прозрачный фон для YouTube */
+/* Прозрачный фон для элементов YouTube */
 yt-live-chat-renderer,
 yt-live-chat-text-message-renderer,
 yt-live-chat-item-list-renderer,
 #chatframe {
-  background: transparent !important;
+  background: transparent !important; /* Устанавливаем прозрачный фон */
 }
 
-/* END YOUTUBE */
+/* КОНЕЦ YOUTUBE */
 
-/* BEGIN TWITCH */
+/* НАЧАЛО TWITCH */
 
+/* Скрытие заголовка чата, приветственного сообщения и панели ввода на Twitch */
 #root .stream-chat-header,
 #root .chat-room__content > div:first-child,
 #root .chat-input,
 #root .chat-line__status[data-a-target="chat-welcome-message"] {
-  display: none !important;
+  display: none !important; /* Скрыть указанные элементы */
 }
 
+/* Удаление полосы прокрутки в чате Twitch */
 #root .scrollable-area[data-a-target="chat-scroller"] .simplebar-track {
-  display: none !important;
+  display: none !important; /* Убираем полосу прокрутки */
 }
 
+/* Стили для сообщений чата на Twitch */
 #root .chat-line__message {
   font-size: 18px; /* Размер шрифта */
   font-family: Arial, sans-serif; /* Шрифт */
   color: #FFFFFF; /* Цвет текста */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Тень текста */
-  padding: 6px 8px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Тень текста для улучшения видимости */
+  padding: 6px 8px; /* Отступы */
 }
 
-/* Прозрачный фон для Twitch */
+/* Прозрачный фон для сообщений и чата на Twitch */
 #root .chat-scrollable-area__message-container,
 #root .chat-line__message,
 #root .chat-room {
-  background: transparent !important;
+  background: transparent !important; /* Устанавливаем прозрачный фон */
 }
 
-/* END TWITCH */
+/* КОНЕЦ TWITCH */
 
 /* Общая прозрачность для всех элементов */
 * {
-  background: transparent !important;
+  background: transparent !important; /* Прозрачный фон для всех элементов */
 }
